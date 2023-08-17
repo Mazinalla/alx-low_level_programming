@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * main - determine if anumber positive, negative or zero.
@@ -6,18 +7,11 @@
  */
 void positive_or_negative(int i)
 {
-if (i < 0)
-{
-printf("%d is %s\n", i, "negative");
-}
-else if (i < 0)
-{
-printf("%d is %s\n", i, "positive");
-}
-else
-{
-printf("%d is %s\n", i, "zero");
-}
-return;
+	if (i < 0)
+		printf("%d is %s\n", i, "negative");
+	else if (i < 0)
+		printf("%d is %s\n", i, "positive");
+	else
+		printf("%d is %s\n", i, "zero");
 
 }
