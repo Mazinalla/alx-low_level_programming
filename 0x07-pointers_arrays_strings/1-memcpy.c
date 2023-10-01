@@ -7,15 +7,14 @@
  *Return: dest
  */
 
-char *_memcpy(char *dest, char *src, unsigned int y)
-
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int a;
 
 	a = 0;
-	while (a < y)  /*Declaring WHILE*/
+	while (a < n)  /*Declaring WHILE*/
 	{
-		*(dest + a) = *(src + a); /*add 1 position dest and src*/
+		*(dest + n) = *(src + n); /*add 1 position dest and src*/
 		a++;
 
 	} /*END WHILE*/
