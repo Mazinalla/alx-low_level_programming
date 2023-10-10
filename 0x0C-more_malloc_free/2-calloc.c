@@ -3,13 +3,17 @@
 #include <stdlib.h>
 
 /**
- * _calloc - function allocates memory for an array and returns a pointer to the allocated memory.
- * @nmemb: number of memory bytes.
+ * _calloc - function allocates memory for an array and returns
+ * a pointer to the allocated memory.
+ * @nmemb: element from memory
+ * @size: number of memory bytes.
  * Return: NULL If nmemb or size is 0 or malloc fails.
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size){
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
 	char *a;
+
 	unsigned int d;
 
 	if (nmemb == 0 || size == 0)
