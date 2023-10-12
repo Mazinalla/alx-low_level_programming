@@ -10,14 +10,15 @@ int main(void)
 {
 	int n;
 	int m;
-	for (n = 48;n <= 57;n++)
+
+	for (n = 48; n <= 57; n++)
 	{
-		for (m = 48;m <= 57;m++)
+		for (m = 48; m <= 57; m++)
 		{
-			if (n == m )
-                        {
-                                m++;
-                        }
+			if (n == m)
+			{
+				m++;
+			}
 			putchar(n);
 			putchar(m);
 			putchar(',');
@@ -25,5 +26,5 @@ int main(void)
 		}
 		putchar('\n');
 	}
-	return 0;
+	return (0);
 }
