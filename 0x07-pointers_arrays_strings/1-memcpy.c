@@ -9,16 +9,9 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int a;
-
-	a = 0;
-	while (a < n)  /*Declaring WHILE*/
-	{
-		*(dest + n) = *(src + n); /*add 1 position dest and src*/
-		a++;
-
-	} /*END WHILE*/
-
-
-	return (dest);
+	char *original_dest = dest; // Store the original destination pointer
+    while (n--) {
+        *dest++ = *src++; // Copy byte by byte
+    }
+    return (original_dest);
 }
