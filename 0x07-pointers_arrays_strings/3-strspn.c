@@ -1,30 +1,37 @@
 #include <stdio.h>
 
-unsigned int _strspn(char *s, char *accept) {
-    unsigned int count = 0;
-    int found;
+/**
+ * _strspn - gets the length of a prefix substring.
+ * @s: string.
+ * @accept: string.
+ * Return:always 0(success).
+ */
 
-    // Iterate through each character in s
-    while (*s) {
-        found = 0;
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int count = 0;
+	int found;
 
-        // Iterate through each character in accept
-        char *a = accept;
-        while (*a) {
-            // If the current character in s matches any character in accept
-            if (*s == *a) {
-                count++; // Increment the count
-                found = 1; // Mark as found
-                break; // Break out of the inner loop
-            }
-            a++; // Move to the next character in accept
-        }
+	while (*s)
+	{
+		found = 0;
 
-        // If the current character in s is not found in accept, stop
-        if (!found) break;
+		char *a = accept;
 
-        s++; // Move to the next character in s
-    }
+		while (*a)
+		{
+			if (*s == *a)
+			{
+				count++;
+				found = 1;
+				break;
+			}
 
-    return count;
+			a++;
+		}
+		if (!found)
+			break;
+		s++;
+	}
+	return (count);
 }
