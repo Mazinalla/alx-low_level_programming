@@ -10,27 +10,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	int found;
+	char *a;
 
 	while (*s)
 	{
-		found = 0;
-
-		char *a = accept;
-
-		while (*a)
+		for (a = accept; *a; a++)
 		{
 			if (*s == *a)
 			{
-				count++;
-				found = 1;
 				break;
 			}
-
-			a++;
 		}
-		if (!found)
-			break;
+		if (!*a)
+		{
+			return (count);
+		}
+		count++;
 		s++;
 	}
 	return (count);
