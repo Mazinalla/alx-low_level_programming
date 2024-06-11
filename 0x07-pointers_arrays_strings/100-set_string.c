@@ -10,7 +10,5 @@
  */
 void set_string(char **s, char *to)
 {
-	*s = to; /* Assigns the value of 'to' 
-		    (the address it points to)
-		    to the pointer 's' */
+	*s = to;
 }
